@@ -1,0 +1,32 @@
+app:
+  name: "NIFTY 50 Tuesday Expiry Options Bot"
+  version: "1.0.0"
+  environment: "paper_trading"  # paper_trading or live
+
+capital:
+  account_capital: 50000.0
+  max_risk_per_trade_percent: 1.5
+  max_daily_loss_percent: 3.0
+  max_weekly_loss_percent: 6.0
+  max_open_positions: 2
+  capital_mode: "MODE_B"  # MODE_A (Very Low), MODE_B (Low), MODE_C (Medium), MODE_D (Advanced)
+
+strategy:
+  min_signal_score: 70
+  min_risk_reward: 1.5
+  min_expected_value: 100.0
+  min_probability_of_profit: 0.50
+  max_bid_ask_spread_percent: 3.0
+  max_slippage_points: 5.0
+  cheap_option_min_quality_score: 60.0
+
+lot_size:
+  nifty: 25  # NIFTY 50 current lot size
+
+transaction_costs:
+  brokerage_per_order: 20.0
+  stt_sell_percent: 0.0625
+  exchange_charges_percent: 0.053
+  gst_percent: 18.0
+  sebi_charges_percent: 0.0001
+  stamp_duty_buy_percent: 0.003
